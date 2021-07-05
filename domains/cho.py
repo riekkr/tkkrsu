@@ -68,9 +68,9 @@ async def bancho_http_handler(conn: Connection) -> bytes:
     packets = glob.bancho_packets['all']
 
     return b'<!DOCTYPE html>' + '<br>'.join((
-        f'Running gulag v{glob.version}',
+        f'Running tkkrsu! v{glob.version}',
         f'Players online: {len(glob.players) - 1}',
-        '<a href="https://github.com/cmyui/gulag">Source code</a>',
+        '<a href="https://github.com/thaddeuskkr/gulag">Source code</a>',
         '',
         f'<b>Packets handled ({len(packets)})</b>',
         '<br>'.join([f'{p.name} ({p.value})' for p in packets])

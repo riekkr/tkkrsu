@@ -358,19 +358,19 @@ class StatsUpdateRequest(BasePacket):
 WELCOME_MSG = '\n'.join((
     f"Welcome to {BASE_DOMAIN}.",
     "To see a list of commands, use !help.",
-    "We have a public (Discord)[https://discord.gg/ShEQgUx]!",
-    "Enjoy the server!"
+    "We have a public (Discord)[https://discord.gg/GJzKEt57CP]!",
+    "Have fun!"
 ))
 
 RESTRICTED_MSG = (
     'Your account is currently in restricted mode. '
     'If you believe this is a mistake, or have waited a period '
-    'greater than 3 months, you may appeal via the form on the site.'
+    'greater than 1 week, you may contact thaddeuskkr for an appeal.'
 )
 
 WELCOME_NOTIFICATION = packets.notification(
     f'Welcome back to {BASE_DOMAIN}!\n'
-    f'Running gulag v{glob.version}.'
+    f'Running tkkrsu! v{glob.version}.'
 )
 
 OFFLINE_NOTIFICATION = packets.notification(

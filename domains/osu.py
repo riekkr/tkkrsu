@@ -146,8 +146,7 @@ def acquire_db_conn(cursor_cls = aiomysql.Cursor) -> Callable:
 @domain.route(re.compile(r'^/u/\d{1,10}/?$'))
 async def userHandler(conn: Connection) -> HTTPResponse:
     conn.resp_headers['Location'] = f'https://tkkr.tech{conn.path}'
-    return (301, b'') 
-
+    return (301, b'')
 
 @domain.route('/web/osu-error.php', methods=['POST'])
 async def osuError(conn: Connection) -> HTTPResponse:

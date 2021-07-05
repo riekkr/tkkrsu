@@ -14,10 +14,10 @@ TABLE_COLUMNS = ['tscore', 'rscore', 'pp', 'plays',
 async def main():
     pool = AsyncSQLPool()
     await pool.connect({
-        'db': 'gulag_old',
+        'db': 'osu',
         'host': 'localhost',
-        'password': 'lol123',
-        'user': 'cmyui'
+        'password': 'tkkr',
+        'user': 'root'
     })
 
     async with pool.pool.acquire() as conn:

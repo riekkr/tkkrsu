@@ -428,8 +428,7 @@ async def osuSearchHandler(p: 'Player', conn: Connection) -> HTTPResponse:
 
     params = {
         'amount': 100,
-        'offset': int(conn.args['p']) * 100,
-        'raw': True
+        'offset': int(conn.args['p']) * 100
     }
 
     # eventually we could try supporting these,

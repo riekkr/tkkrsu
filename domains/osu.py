@@ -395,6 +395,7 @@ async def lastFM(p: 'Player', conn: Connection) -> HTTPResponse:
 # chimu.moe handles things a bit differently than cheesegull,
 # and has some extra features we'll eventually use more of.
 USING_CHIMU = 'chimu.moe' in glob.config.mirror
+USING_CHEESEGULL = 'bm6.aeris-dev.pw' in glob.config.mirror
 
 DIRECT_SET_INFO_FMTSTR = (
     '{{{setid_spelling}}}.osz|{{Artist}}|{{Title}}|{{Creator}}|'
@@ -420,6 +421,8 @@ async def osuSearchHandler(p: 'Player', conn: Connection) -> HTTPResponse:
 
     if USING_CHIMU:
         search_url = f'{glob.config.mirror}/search'
+    elif USING_CHEESEGULL:
+        search_url = f'{glob.config.mirror}/cheesegull/search'
     else:
         search_url = f'{glob.config.mirror}/api/search'
 

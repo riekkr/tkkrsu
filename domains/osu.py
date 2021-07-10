@@ -422,7 +422,7 @@ async def osuSearchHandler(p: 'Player', conn: Connection) -> HTTPResponse:
     if USING_CHIMU:
         search_url = f'{glob.config.mirror}/search'
     elif USING_CHEESEGULL:
-        search_url = f'{glob.config.mirror}/cheesegull/search'
+        search_url = f'{glob.config.mirror}/api/cheesegull/search'
     else:
         search_url = f'{glob.config.mirror}/api/search'
 

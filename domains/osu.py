@@ -428,7 +428,8 @@ async def osuSearchHandler(p: 'Player', conn: Connection) -> HTTPResponse:
 
     params = {
         'amount': 100,
-        'offset': int(conn.args['p']) * 100
+        'offset': int(conn.args['p']) * 100,
+        'raw': True
     }
 
     # eventually we could try supporting these,
@@ -462,7 +463,7 @@ async def osuSearchHandler(p: 'Player', conn: Connection) -> HTTPResponse:
             if resp.status != 200:
                 return b'-1\nFailed to retrieve data from the beatmap mirror.'
 
-        result = await resp.json()
+        result = await resp.json(content_type=None)
 
         if USING_CHIMU:
             if result['code'] != 0:
